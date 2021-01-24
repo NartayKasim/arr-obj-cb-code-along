@@ -3,7 +3,7 @@
 // Modify the function below to return the first item of the array that is being passed in
 
 function first(arr) {
-  //Code here
+  return arr[0];
 }
 
 //////////////////PROBLEM 2////////////////////
@@ -11,7 +11,7 @@ function first(arr) {
 // Modify the function below to return the length of the array that is being passed in
 
 function length(arr) {
-  //Code here
+  return arr.length;
 }
 
 //////////////////PROBLEM 3////////////////////
@@ -19,7 +19,7 @@ function length(arr) {
 // Modify the function below to return the last item of the array that is being passed in
 
 function last(arr) {
-  //Code here
+  return arr[arr.length -1];
 }
 
 //////////////////PROBLEM 4////////////////////
@@ -27,7 +27,7 @@ function last(arr) {
 // Modify the function below to add the passed in number to the end of the passed in array
 
 function addItem(array, number) {
-  //Code here
+  array.push(number)
   return array
 }
 
@@ -36,7 +36,7 @@ function addItem(array, number) {
 // Modify the function below to remove the last item of the array being passed in
 
 function removeLast(array) {
-  //Code here
+  array.pop();
   return array
 }
 
@@ -45,7 +45,7 @@ function removeLast(array) {
 // Modify the function below to remove the first item of the array being passed in
 
 function removeFirst(array) {
-  //Code here
+  array.shift();
   return array
 }
 
@@ -56,7 +56,7 @@ function removeFirst(array) {
 function maker() {
   var numbers = []
   for (var i = 0; i <= 25; i++) {
-    //Code here
+    numbers.push(i);
   }
 
   return numbers
@@ -69,7 +69,9 @@ function maker() {
 function count31() {
   var numbers = []
 
-  //Code here
+  for (let i=0; i < 32; i++) {
+    numbers.push(i)
+  }
 
   return numbers
 }
@@ -86,7 +88,7 @@ function backWards(arr) {
   var newArray = []
 
   for (var i = arr.length - 1; i >= 0; i--) {
-    // code here
+    newArray.push(arr[i]);
   }
 
   return newArray
@@ -100,7 +102,14 @@ function backWards(arr) {
 // findInArray([0,1,2,3], 4); -> false
 
 function findInArray(arr, value) {
-  // code here
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === value) {
+      return true;
+    }
+  }
+
+  return false;
+
 }
 
 //////////////////PROBLEM 11////////////////////
@@ -114,7 +123,7 @@ function addTen(arr) {
   var newArr = []
 
   for (var i = 0; i < arr.length; i++) {
-    // code here
+    newArr.push(arr[i] + 10)
   }
 
   return newArr
@@ -131,7 +140,7 @@ function personName() {
     age: 29,
     location: 'Orem, UT',
   }
-  return // Code here
+  return person.firstName
 }
 
 //////////////////PROBLEM 13////////////////////
@@ -145,7 +154,7 @@ function personLocation() {
     age: 29,
     location: 'Orem, UT',
   }
-  return // Code Here
+  return person['location']
 }
 
 //////////////////PROBLEM 14////////////////////
@@ -154,7 +163,7 @@ function personLocation() {
 
 const backpack = {}
 
-// Code Here
+backpack.frontPocket = "compass";
 
 //////////////////PROBLEM 15////////////////////
 
@@ -162,7 +171,7 @@ const backpack = {}
 
 const box = {}
 
-// Code Here
+box['material'] = 'cardboard';
 
 //////////////////PROBLEM 16////////////////////
 
@@ -172,7 +181,7 @@ const person = {}
 
 person['firstName'] = 'sally'
 
-//code here
+let userFirstName = person.firstName
 
 //////////////////PROBLEM 17////////////////////
 
@@ -186,7 +195,11 @@ person['firstName'] = 'sally'
 // };
 
 function updateUser(user) {
-  // Code Here
+  user.name = 'Ryan';
+  user.pwHash = 'superSafe';
+  user.username = 'ryan2020';
+
+  return user
 }
 
 //////////////////PROBLEM 18////////////////////
@@ -194,20 +207,27 @@ function updateUser(user) {
 //Inside the function updateEmail, update the email property of the passed in object to be the value of the parameter str. Return the updated object.
 
 function updateEmail(obj, str) {
-  // Code here
+  return obj.email = str;
 }
 
 //////////////////PROBLEM 19////////////////////
 
 // Write a function called isOldEnough that takes a person obj and checks the age property to see if the person is old enough to enter the club.  If they are 21 or older return true else return false.
 
-// Code here
+function isOldEnough(person) {
+  if (person.age >= 21) {
+    return true;
+  }
+  return false;
+}
 
 //////////////////PROBLEM 20////////////////////
 
 //Create a function called addRole that takes in a user object as the first parameter and a string as the second parameter.  The string will represent the user's new role in the system (i.e. admin, creator, editor, visitor). Create a new property on the user object called "role" and assign the passed in string to it, then return the updated object.
 
-// Code here
+function addRole(user, str) {
+  return user.role = str;
+}
 
 ///////////////////////////////////////////////////////
 
